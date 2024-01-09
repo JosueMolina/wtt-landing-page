@@ -3,14 +3,691 @@
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Looking for the best school to teach? Let us help you find the best fit school for you. Teachers, anonymously review your past and current schools of employment. Honest reviews for teachers, by teachers."
+    />
+    <meta name="keywords" content="best schools to teach, teach in the us" />
+    <link rel="canonical" href="https://wheretoteach.com" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>Find the best schools to teach in the US | Where to Teach</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-66648483-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-66648483-2');
+    </script>
+    <link href="/main.793c6e1457dc98a12124.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Header Area wrapper Starts -->
+    <header id="header-wrap">
+      <!-- Navbar Start -->
+      <nav
+        class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar"
+      >
+        <div class="container">
+          <div class="logo-wrap">
+            <a href="/" class="navbar-brand"
+              ><img
+                src="https://imgs.wheretoteach.com/logo.png"
+                alt="wheretoteach"
+              /></a
+            >
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="lni-menu"></i>
+          </button>
+
+          <div
+            data-nosnippet
+            class="collapse navbar-collapse"
+            id="navbarCollapse"
+          >
+            <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
+              <li class="nav-item">
+                <a class="nav-link" href="/browse/states-and-counties">
+                  Browse States & Counties
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/browse/categories">
+                  Browse Categories
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/browse/blog"> Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+    </header>
+    <!-- Header Area wrapper End -->
+
+    <!-- Hero Area Start -->
+    <div id="hero-area" class="contents container hero-area-bg">
+      <div class="contents container">
+        <div class="row alig-items-center">
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 my-auto">
+            <p class="hero-header">
+              <span>Thinking about teaching</span>
+              <span>or moving to a different school?</span>
+            </p>
+            <h1>Find the best school for you</h1>
+            <div class="s003">
+              <form id="search-form" method="GET" Action="/school-search">
+                <div data-nosnippet class="inner-form">
+                  <div class="input-field first-wrap" style="display: none;">
+                    <div class="input-select">
+                      <select
+                        name="rbste"
+                        id="search-state"
+                        data-trigger=""
+                        name="choices-single-defaul"
+                      >
+                        <option value="" placeholder="">Choose a State</option>
+                        <option value="1">Alabama</option>
+                        <option value="2">California</option>
+                        <option value="3">New York</option>
+                        <option value="4">Washington</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="input-field second-wrap">
+                    <span class="btn-search">
+                      <svg
+                        data-icon="search"
+                        role="img"
+                        aria-hidden="true"
+                        data-prefix="fas"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="svg-inline--fa fa-search fa-w-16"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 
+                                                93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 
+                                                6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 
+                                                9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 
+                                                70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                        >
+                        </path>
+                      </svg>
+                    </span>
+                    <input
+                      name="rbkwd"
+                      autocomplete="off"
+                      id="search-school"
+                      type="text"
+                      placeholder="Search Schools"
+                    />
+                    <ul id="suggestions" class="suggestions"></ul>
+                    <p id="no-signup-required" class="no-signup-required">
+                      No signup required!
+                    </p>
+                  </div>
+                </div>
+              </form>
+              <button
+                id="search-button"
+                data-nosnippet
+                class="btn btn-common wow fadeInLeft mx-auto col-lg-3 col-md-3 col-sm-4 col-xs-4 col-4"
+                >Search</button
+              >
+            </div>
+          </div>
+          <div class="col-lg-6 cold-md-12 col-sm-12 col-xs-12">
+            <img
+              id="find-the-best-school-for-you-image"
+              src="https://imgs.wheretoteach.com/where-to-teach-find-your-school-and-school-rating-hero-area.png"
+              title="Find and rate schools"
+              alt="Find and rate schools"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero Area End -->
+    <!-- Header Area wrapper End -->
+
+    <section id="view-top-schools" class="section-padding">
+      <div id="view-top-schools-wrap">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p>
+                <span>View the</span><span id="top-100">TOP 100</span>
+                <span>schools</span>
+              </p>
+              <a href="/school-search" class="btn btn-common"> Browse Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="curved-lid"></div>
+    </section>
+
+    <section id="find-your-next-school" class="section-padding gray-background">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-12">
+            <img
+              id="find-your-next-school-image"
+              class="wow fadeInLeft"
+              src="https://imgs.wheretoteach.com/find-your-next-school.png"
+              title="find your next school"
+              alt="find your next school"
+            />
+          </div>
+          <div class="col-lg-6 col-md-6 col-12 my-auto info">
+            <h2>Find your next school</h2>
+            <div class="shape wow fadeInLeft" data-wow-delay="0.3s"></div>
+            <p>
+              Our platform provides helpful tools to compare potential job
+              placements and find the "best-fit" school for both current and
+              aspiring teachers.
+            </p>
+            <a href="/school-search" class="btn btn-common"> Find a school</a>
+          </div>
+        </div>
+        <div class="row steps-row">
+          <div
+            class="col-lg-4 col-md-4 col-sm-6 mx-sm-auto col-8 mx-auto step-tab"
+          >
+            <div class="step-tab-container">
+              <div class="icon-box">
+                <img
+                  src="https://imgs.wheretoteach.com/refine-icon.png"
+                  title="Refine"
+                  alt="Refine"
+                />
+              </div>
+              <h4>Refine</h4>
+              <p>Apply filters to better fit what you're looking for.</p>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-4 col-sm-6 mx-sm-auto col-8 mx-auto step-tab"
+          >
+            <div class="step-tab-container">
+              <div class="icon-box">
+                <img
+                  src="https://imgs.wheretoteach.com/reviews-icon.png"
+                  title="Reviews"
+                  alt="Reviews"
+                />
+              </div>
+              <h4>Reviews</h4>
+              <p>Compare ratings of schools you’re interested in.</p>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-4 col-sm-6 mx-sm-auto col-8 mx-auto step-tab"
+          >
+            <div class="step-tab-container">
+              <div class="icon-box">
+                <img
+                  src="https://imgs.wheretoteach.com/select-icon.png"
+                  title="Select"
+                  alt="Select"
+                />
+              </div>
+              <h4>Select</h4>
+              <p>Select a school and check out its profile.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="schools-rating-reviews" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div
+            class="order-2 order-xl-1 order-lg-1 order-md-1 order-sm-2 col-lg-6 col-md-6 col-12 my-auto info"
+          >
+            <h2>School Ratings & Reviews</h2>
+            <div class="shape wow fadeInLeft" data-wow-delay="0.3s"></div>
+            <p>
+              Wheretoteach.com is a unique online platform where teachers can <b
+                >anonymously review</b
+              >
+              their past and current schools of employment.
+            </p>
+            <a href="/school-search" class="btn btn-common"> School Rating</a>
+          </div>
+          <div
+            class="order-1 order-xl-2 order-lg-2 order-md-2 order-sm-1 col-lg-6 col-md-6 col-12"
+          >
+            <img
+              id="schools-rating-reviews-image"
+              class="wow fadeInRight"
+              src="https://imgs.wheretoteach.com/schools-rating-reviews.png"
+              title="School Ratings & Reviews"
+              alt="Schools Rating & Reviews"
+            />
+          </div>
+        </div>
+        <div class="row steps-row">
+          <div
+            class="col-lg-4 col-md-4 col-sm-6 mx-sm-auto col-8 mx-auto step-tab"
+          >
+            <div class="step-tab-container">
+              <div class="icon-box">
+                <img
+                  src="https://imgs.wheretoteach.com/search-icon.png"
+                  title="Search"
+                  alt="Search"
+                />
+              </div>
+              <h4>Search</h4>
+              <p>Type your school's name in the search box.</p>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-4 col-sm-6 mx-sm-auto col-8 mx-auto step-tab"
+          >
+            <div class="step-tab-container">
+              <div class="icon-box">
+                <img
+                  src="https://imgs.wheretoteach.com/write-icon.png"
+                  title="Write"
+                  alt="Write"
+                />
+              </div>
+              <h4>Write</h4>
+              <p>Select the school and start writing a review.</p>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-4 col-sm-6 mx-sm-auto col-8 mx-auto step-tab"
+          >
+            <div class="step-tab-container">
+              <div class="icon-box">
+                <img
+                  src="https://imgs.wheretoteach.com/send-icon.png"
+                  title="Send"
+                  alt="Send"
+                />
+              </div>
+              <h4>Send</h4>
+              <p>
+                Complete your review. <br />
+                <span>Easy as that, no signup required!</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quote" class="section-padding gray-background">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-3 col-md-4 col-12">
+            <img
+              src="https://imgs.wheretoteach.com/carmen-second-grade-teacher.png"
+              title="Carmen, Second Grade Teacher"
+              alt="Carmen, Second Grade Teacher"
+            />
+          </div>
+          <div class="col-lg-9 col-md-8 col-12">
+            <img
+              src="https://imgs.wheretoteach.com/quote-icon.png"
+              title="Quote"
+              alt="Quote"
+            />
+            <p class="quote-text">
+              Wheretoteach.com helped me last year when I was a recent college
+              graduate. The county where I was applying locks new untenured
+              teachers into a contract for a few years, so I wanted to make sure
+              I really loved the school where I was to stay for a while. On
+              wheretoteach.com I read really helpful reviews written by real
+              teachers. I applied to many schools that had good reviews and
+              thankfully I was hired at one of them!".
+            </p>
+            <p class="quote-author-name">Carmen</p>
+            <p class="quote-author-title">Second Grade Teacher</p>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-3 col-md-4 col-12">
+            <img
+              src="https://imgs.wheretoteach.com/derek-english-teacher.png"
+              title="Derek, English Teacher"
+              alt="Derek, English Teacher"
+            />
+          </div>
+          <div class="col-lg-9 col-md-8 col-12">
+            <img
+              src="https://imgs.wheretoteach.com/quote-icon.png"
+              title="Quote"
+              alt="Quote"
+            />
+            <p class="quote-text">
+              I used wheretoteach.com when I was moving to a new city. I was
+              unfamiliar with the school district and had no idea where to begin
+              my search for another teaching position. Luckily, I came across
+              wheretoteach.com which helped me find specific schools that had
+              all the things that are important to me".
+            </p>
+            <p class="quote-author-name">Derek</p>
+            <p class="quote-author-title">English Teacher</p>
+          </div>
+        </div>
+      </div>
+      <div id="quotes-slicks" class="row">
+        <div class="col-lg-9 col-md-9 offset-lg-3 offset-md-3 col-12">
+          <div class="r03-quote__bars">
+            <div class="r03-quote__bars__inner js-r03-quote-bars">
+              <ul class="slick-dots" style="" role="tablist">
+                <li class="slick-active" role="presentation">
+                  <button
+                    class="quote-slick"
+                    type="button"
+                    role="tab"
+                    id="slick-slide-control00"
+                    aria-controls="slick-slide00"
+                    aria-label="1 of 4"
+                    tabindex="0"
+                    aria-selected="true">1</button
+                  >
+                </li>
+                <li role="presentation">
+                  <button
+                    class="quote-slick"
+                    type="button"
+                    role="tab"
+                    id="slick-slide-control01"
+                    aria-controls="slick-slide01"
+                    aria-label="2 of 4"
+                    tabindex="-1">2</button
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="popular-searches" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="wow fadeInDown">Popular Searches</h2>
+          </div>
+        </div>
+        <div class="row lists-container">
+          <div class="col-lg-4 col-md-4 col-12">
+            <h3 class="footer-title">Popular Schools</h3>
+            <ul class="footer-link">
+              <li>
+                <a href="~/bergen-county-academies-6728"
+                  >Bergen County Academies NJ</a
+                >
+              </li>
+              <li>
+                <a href="~/brooklyn-latin-school-the-9742"
+                  >Brooklyn Latin School NY</a
+                >
+              </li>
+              <li>
+                <a href="~/gilbert-classical-academy-high-school-32601"
+                  >Gilbert Classical Academy AZ</a
+                >
+              </li>
+              <li>
+                <a href="~/columbus-high-school-17679"
+                  >Columbus High School GA</a
+                >
+              </li>
+              <li>
+                <a href="~/elizabeth-high-school-frank-j-26065"
+                  >Elizabeth High School NJ</a
+                >
+              </li>
+              <li><a href="~/langley-high-48665">Langley High School VA</a></li>
+              <li><a href="~/lowell-high-52440">Lowell High School CA</a></li>
+              <li>
+                <a href="~/orono-high-school-66262">Orono High School ME</a>
+              </li>
+              <li>
+                <a href="~/poolesville-high-70851">Poolesville High School MD</a
+                >
+              </li>
+              <li>
+                <a href="~/wyoming-high-school-99042">Wyoming High School OH</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <h3 class="footer-title">Popular Counties</h3>
+            <ul class="footer-link">
+              <li><a href="~/Schools-in-Bristol-County-MA">Bristol MA</a></li>
+              <li><a href="~/Schools-in-Broward-County-FL">Broward FL</a></li>
+              <li><a href="~/Schools-in-Dallas-County-TX">Dallas TX</a></li>
+              <li><a href="~/Schools-in-Harris-County-TX">Harris TX</a></li>
+              <li>
+                <a href="~/Schools-in-Los-Angeles-County-CA">Los Angeles CA</a>
+              </li>
+              <li>
+                <a href="~/Schools-in-Riverside-County-CA">Riverside CA</a>
+              </li>
+              <li>
+                <a href="~/Schools-in-San-Diego-County-CA">San Diego CA</a>
+              </li>
+              <li>
+                <a href="~/Schools-in-Santa-Clara-County-CA">Santa Clara CA</a>
+              </li>
+              <li><a href="~/Schools-in-Suffolk-County-NY">Suffolk NY</a></li>
+              <li>
+                <a href="~/Schools-in-Westchester-County-NY">Westchester NY</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <h3 class="footer-title">Other Searches</h3>
+            <ul class="footer-link">
+              <li>
+                <a href="~/Elementary-Schools-in-Virginia"
+                  >Elementary Schools in Virginia</a
+                >
+              </li>
+              <li>
+                <a href="~/Elementary-Schools-in-California"
+                  >Elementary Schools in California</a
+                >
+              </li>
+              <li>
+                <a href="~/High-Schools-in-Colorado">High Schools in Colorado</a
+                >
+              </li>
+              <li>
+                <a href="~/Middle-Schools-in-North-Carolina"
+                  >Middle Schools in North Carolina</a
+                >
+              </li>
+              <li>
+                <a href="~/Prekindergarten-Schools-in-Ohio"
+                  >Prekindergarten Schools in Ohio</a
+                >
+              </li>
+              <li>
+                <a href="~/Private-Schools-in-Florida"
+                  >Private Schools in Florida</a
+                >
+              </li>
+              <li>
+                <a href="~/Private-Schools-in-New-York"
+                  >Private Schools in New York</a
+                >
+              </li>
+              <li>
+                <a href="~/Private-Schools-in-Pennsylvania"
+                  >Private Schools in Pennsylvania</a
+                >
+              </li>
+              <li>
+                <a href="~/Public-Schools-in-California"
+                  >Public Schools in California</a
+                >
+              </li>
+              <li>
+                <a href="~/Public-Schools-in-New-York"
+                  >Public Schools in New York</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section Start -->
+    <footer data-nosnippet id="footer">
+      <div class="footer-area dark section-padding">
+        <div class="container">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <h3 class="footer-title">About</h3>
+                <ul class="footer-link">
+                  <li><a href="/what-is-where-to-teach">About us</a></li>
+                  <li><a href="/blog">Blog</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <h3 class="footer-title">Company</h3>
+                <ul class="footer-link">
+                  <li><a href="/privacy-policy">Privacy Policy</a></li>
+                  <li>
+                    <a href="/terms-and-conditions">Terms And Conditions</a>
+                  </li>
+                  <li><a href="/privacy-policy#cookies">Cookies Policy</a></li>
+                  <li>
+                    <a href="/community-guidelines">Community Guidelines</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <h3 class="footer-title">Contact</h3>
+                <ul class="address">
+                  <li>
+                    <a href="mailto:contact@wheretoteach.com"
+                      ><i class="lni-envelope"></i>contact@wheretoteach.com</a
+                    >
+                  </li>
+                  <li id="social-network-icons">
+                    <div class="social-icon">
+                      <a href="https://www.instagram.com/wheretoteach/"
+                        ><img
+                          src="https://imgs.wheretoteach.com/instagram-icon.png"
+                          title="WhereToTeach's instagram"
+                          alt="WhereToTeach's instagram"
+                        /></a
+                      >
+                      <a href="https://www.facebook.com/WheretoteachUSA"
+                        ><img
+                          src="https://imgs.wheretoteach.com/facebook-icon.png"
+                          title="WhereToTeach's facebook"
+                          alt="WhereToTeach's facebook"
+                        /></a
+                      >
+                      <a href="https://twitter.com/WheretoteachUSA"
+                        ><img
+                          src="https://imgs.wheretoteach.com/twitter-icon.png"
+                          title="WhereToTeach's twitter"
+                          alt="WhereToTeach's twitter"
+                        /></a
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="copyright-content">
+                  <p>
+                    Copyright &copy; 2024 <a rel="nofollow" href="/"
+                      >wheretoteach.com</a
+                    > All Rights Reserved.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Go to Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="lni-arrow-up"></i>
+    </a>
+
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader" id="loader-1"></div>
+    </div>
+    <!-- End Preloader -->
+
+    <script type="text/javascript" src="/runtime.b0736ac70307edc0d219.js"
+    ></script><script
+      type="text/javascript"
+      src="/vendor.50633799f3c6a07800aa.js"></script><script
+      type="text/javascript"
+      src="/fusioncharts.b881a9c3e65f56529eec.js"></script><script
+      type="text/javascript"
+      src="/main.4edcc9fd7b8e54fdbdd4.js"></script></body
+  >
+
+  <script>
+    wtt.global.SchoolSearchApiUrl = '/school-search-api';
+  </script>
+
+  <!-- Global Variables -->
+  <script>
+    wtt.global.includeGoogleAds = false;
+  </script>
 </html>
